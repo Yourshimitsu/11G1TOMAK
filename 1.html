@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Главная</title>
+    <script>
+        function digitalClock() {
+            var greetings= '';
+            var date = new Date();
+            var hours = parseInt(date.getHours());
+            if ((hours < 5) || (hours>=18)){
+                document.getElementById("id_clock").innerHTML = "Добрый вечер!";
+            } else if (hours < 12){
+                document.getElementById("id_clock").innerHTML = "Доброе утро!";
+            } else if (hours < 18) {
+                document.getElementById("id_clock").innerHTML = "Добрый день!";
+            } 
+            setTimeout("digitalClock()", 1000);
+        }
+       </script>
 </head>
 <body>
-    
+    <ul>
+        <a href="#">
+            <li>Главная</li>
+        </a>
+        <a href="catalog.html">
+            <li>Каталог</li>
+        </a>
+        <a href="about.html">
+            <li>О нас</li>
+        </a>
+    </ul>
+    <hr>
+    <h1> 
+        <div id="id_clock"></div>
+        <script>digitalClock();</script>
+        Добро пожаловать в наш интернет-магазин.
+    </h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+        Delectus nisi, necessitatibus adipisci nobis iste eius reiciendis 
+        voluptatibus aliquam ipsa quisquam minus, sit doloribus aspernatur, 
+        sint cum animi at vel odit!0</p>
+    <div id="id_clock"></div>
+    <script>digitalClock();</script>
+    <img src="lizard1.png" 
+        alt="Ooops..." width="700px"> 
 </body>
 </html>
