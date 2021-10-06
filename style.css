@@ -1,0 +1,29 @@
+ul a{
+    text-decoration:none;
+    list-style-type: none;
+    color: black;
+}
+
+img{
+    outline: pink 10px solid;
+}
+
+h3{
+    background-color: pink;
+}
+
+footer{
+    background-color: pink;
+    font-size: 50px;
+}
+
+body{
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    margin: 0;
+}
+
+html{
+    height: 100%;
+}
