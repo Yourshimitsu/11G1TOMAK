@@ -8,8 +8,10 @@ img{
     outline: pink 10px solid;
 }
 
-h3{
+header{
     background-color: pink;
+    text-align: right;
+    height: 135%;
 }
 
 footer{
@@ -26,4 +28,36 @@ body{
 
 html{
     height: 100%;
+}
+
+header a{
+    display: inline-block;
+    margin: 10px;
+}
+
+.box .item{
+    display: inline-block;
+    margin: 35px;
+    margin-bottom: 22%;
+}
+
+.box{
+    text-align: center;
+}
+
+header img{
+    position: absolute;
+    left: 48.2%;
+    top: 0%;
+    height: 75px;
+}
+
+button{
+    width: 25%;
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+    background-color: blue;
+    }
 }
