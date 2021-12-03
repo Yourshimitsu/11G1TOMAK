@@ -1,0 +1,11 @@
+1)
+UPDATE user SET birthday = SUBSTR(birthday, 7, 4) || '-' || SUBSTR(birthday, 4, 2) || '-' || SUBSTR(birthday, 1, 2);
+UPDATE user SET register = SUBSTR(register, 7, 4) || '-' || SUBSTR(register, 4, 2) || '-' || SUBSTR(register, 1, 2);
+2)
+select name, family, register from user order by register desc LIMIT 1
+3)
+select DISTINCt SUBSTR(birthday, 1, 4) from user;
+4)
+select sum(kolvo) from predmet;
+5)
+SELECT AVG((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(birthday,1,4))-(SUBSTR(CURRENT_DATE,6,5)<SUBSTR(birthday,6,5))) AS 'Age' FROM user WHERE SUBSTR(register,9,2)<=SUBSTR(CURRENT_DATE,9,2) AND ((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(register,1,4))*12+(SUBSTR(CURRENT_DATE,6,2)-SUBSTR(register,6,2)))<=2 OR SUBSTR(register,9,2)>SUBSTR(CURRENT_DATE,9,2) AND ((SUBSTR(CURRENT_DATE,1,4)-SUBSTR(register,1,4))*12+(SUBSTR(CURRENT_DATE,6,2)-SUBSTR(register,6,2)))<=3;
